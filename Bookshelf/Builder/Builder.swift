@@ -12,4 +12,10 @@ class Builder{
         let presernter = presenter(view)
         return view
     }
+    
+   static func createRegisterView()-> UIViewController{
+       return self.createView(view: RegistView.self) { view in
+           RegistPresenter(view: view)
+       }
+    }
 }

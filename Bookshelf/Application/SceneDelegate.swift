@@ -7,13 +7,13 @@
 
 import UIKit
 
+enum WindowCase{
+    case reg,
+         preview,
+         onboarding,
+         main
+}
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    enum WindowCases{
-        case reg,
-        preview,
-        onboarding,
-        main
-    }
     
     var window: UIWindow?
 
@@ -26,16 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     @objc func windowManager(notification: Notification) {
-//        switch window{
-//        case .preview:
-//            <#code#>
-//        case .reg:
-//            <#code#>
-//        case .onboarding:
-//            <#code#>
-//        case .main:
-//            <#code#>
-//        }
+        guard let usertInfo = notification.userInfo as? [String: WindowCase],
+        let windowInfo = usertInfo[.windowInfo] else {return}
+        switch window {
+        default : self.window?.rootViewController = Builder.createRegisterView()
+        }
     }
 
 }

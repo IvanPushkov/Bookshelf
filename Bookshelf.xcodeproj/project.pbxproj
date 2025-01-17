@@ -11,6 +11,9 @@
 		D703ABB72D380F3C00BB90F8 /* RegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703ABB62D380F3C00BB90F8 /* RegistView.swift */; };
 		D703ABB92D380F8D00BB90F8 /* RegistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703ABB82D380F8D00BB90F8 /* RegistPresenter.swift */; };
 		D703ABBB2D3814BE00BB90F8 /* RegistViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703ABBA2D3814BE00BB90F8 /* RegistViewContent.swift */; };
+		D703ABC12D3A815400BB90F8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703ABC02D3A815400BB90F8 /* StringExtension.swift */; };
+		D703ABC42D3A8D8400BB90F8 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703ABC32D3A8D8400BB90F8 /* CustomFont.swift */; };
+		D703ABC92D3A8F5300BB90F8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703ABC82D3A8F5300BB90F8 /* View.swift */; };
 		D7559DBB2D364E8000C1211D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7559DBA2D364E8000C1211D /* AppDelegate.swift */; };
 		D7559DBD2D364E8000C1211D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7559DBC2D364E8000C1211D /* SceneDelegate.swift */; };
 		D7559DC52D364E8000C1211D /* Bookshelf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7559DC32D364E8000C1211D /* Bookshelf.xcdatamodeld */; };
@@ -29,6 +32,9 @@
 		D703ABB62D380F3C00BB90F8 /* RegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistView.swift; sourceTree = "<group>"; };
 		D703ABB82D380F8D00BB90F8 /* RegistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistPresenter.swift; sourceTree = "<group>"; };
 		D703ABBA2D3814BE00BB90F8 /* RegistViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewContent.swift; sourceTree = "<group>"; };
+		D703ABC02D3A815400BB90F8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D703ABC32D3A8D8400BB90F8 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		D703ABC82D3A8F5300BB90F8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D7559DB72D364E8000C1211D /* Bookshelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookshelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7559DBA2D364E8000C1211D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7559DBC2D364E8000C1211D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,47 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		D703ABBF2D3A812800BB90F8 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				D703ABC02D3A815400BB90F8 /* StringExtension.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		D703ABC22D3A8D3B00BB90F8 /* Modifieres */ = {
+			isa = PBXGroup;
+			children = (
+				D703ABC72D3A8F2800BB90F8 /* View */,
+				D703ABC52D3A8E2900BB90F8 /* Font */,
+			);
+			path = Modifieres;
+			sourceTree = "<group>";
+		};
+		D703ABC52D3A8E2900BB90F8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D703ABC32D3A8D8400BB90F8 /* CustomFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		D703ABC62D3A8F0000BB90F8 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D7559DE32D366F5500C1211D /* Notification.Name.ext.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		D703ABC72D3A8F2800BB90F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D703ABC82D3A8F5300BB90F8 /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D7559DAE2D364E7F00C1211D = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				D7559DE52D36705E00C1211D /* Application */,
+				D703ABB22D380BA800BB90F8 /* Builder */,
 				D7559DDA2D365AF800C1211D /* Lottie */,
 				D7559DD12D36505100C1211D /* Fonts */,
-				D7559DE72D36713300C1211D /* Module */,
 				D7559DE12D366F0F00C1211D /* Helpers */,
+				D7559DE72D36713300C1211D /* Module */,
 				D7559DE62D36708000C1211D /* Resources */,
 				D7559DC32D364E8000C1211D /* Bookshelf.xcdatamodeld */,
 			);
@@ -115,7 +163,6 @@
 		D7559DDA2D365AF800C1211D /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				D703ABB22D380BA800BB90F8 /* Builder */,
 				D7559DDD2D366A2100C1211D /* Animation - 1736845865000.json */,
 			);
 			path = Lottie;
@@ -132,7 +179,9 @@
 		D7559DE22D366F1D00C1211D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D7559DE32D366F5500C1211D /* Notification.Name.ext.swift */,
+				D703ABC62D3A8F0000BB90F8 /* Notification */,
+				D703ABC22D3A8D3B00BB90F8 /* Modifieres */,
+				D703ABBF2D3A812800BB90F8 /* String */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,13 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D703ABC92D3A8F5300BB90F8 /* View.swift in Sources */,
 				D703ABBB2D3814BE00BB90F8 /* RegistViewContent.swift in Sources */,
 				D7559DE02D366B0D00C1211D /* FontManager.swift in Sources */,
+				D703ABC42D3A8D8400BB90F8 /* CustomFont.swift in Sources */,
 				D7559DBB2D364E8000C1211D /* AppDelegate.swift in Sources */,
 				D703ABB42D380BC100BB90F8 /* Builder.swift in Sources */,
 				D7559DBD2D364E8000C1211D /* SceneDelegate.swift in Sources */,
 				D703ABB92D380F8D00BB90F8 /* RegistPresenter.swift in Sources */,
 				D703ABB72D380F3C00BB90F8 /* RegistView.swift in Sources */,
+				D703ABC12D3A815400BB90F8 /* StringExtension.swift in Sources */,
 				D7559DC52D364E8000C1211D /* Bookshelf.xcdatamodeld in Sources */,
 				D7559DE42D366F5500C1211D /* Notification.Name.ext.swift in Sources */,
 				D7559DEA2D36716A00C1211D /* PreviewView.swift in Sources */,

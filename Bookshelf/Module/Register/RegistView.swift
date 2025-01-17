@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol RegistViewProtocol:AnyObject, BaseViewProtocol{
     
 }
+
 class RegistView: UIViewController, RegistViewProtocol {
     typealias PresenterType = RegistViewPresenterProtocol
     var presenter: PresenterType?
@@ -17,19 +19,14 @@ class RegistView: UIViewController, RegistViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let contentView = RegistViewContent(){
+            print($0)
+        }
+        let content = UIHostingController(rootView: contentView)
+        self.addChild(content)
+        content.view.frame = view.frame
+        view.addSubview(content.view)
+        content.didMove(toParent: self)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

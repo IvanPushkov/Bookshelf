@@ -20,5 +20,9 @@ class PreviewView: UIViewController{
         view.backgroundColor = UIColor(named: "BGMain")
         view.addSubview(lottieView)
         lottieView.play()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            NotificationCenter.default.post(name: .windowsManager, object: nil, userInfo: [String.windowInfo: WindowCase.reg])
+        }
     }
 }
